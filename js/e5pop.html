@@ -10,16 +10,9 @@
 <body>
     <h1>Ceci est une popup.</h1>
     <input type="button" value="Fermer la fenêtre mère" onclick="closeMain()">
-    <input type="button" value="Fermer la popup" onclick="closePopup()">
+    <input type="button" value="Fermer la popup" onclick="closePop()">
 
-    <script type="text/javascript">
-        function closeMain() {
-            window.opener.close(); //ne fonctionne pas
-        }
-
-        function closePopup() {
-            window.self.close();
-        }
+    <script src="js/5.js">
     </script>
 </body>
 

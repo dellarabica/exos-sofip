@@ -1,2 +1,2 @@
 # Exercices
- just a backup for my school work in case i delete them
+Ignore this repo pls, it's just a backup

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice formulaires</title>
+    <style>
+        table {
+            width: 95%;
+        }
+        
+        table tr td {
+            width: 20%;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Prise de commande</h1>
+    <hr/>
+    <table>
+        <tr>
+            <td>Libellé</td>
+            <td>Référence</td>
+            <td>Quantité</td>
+            <td>Prix unitaire</td>
+            <td>Prix</td>
+        </tr>
+        <tr>
+            <td>
+                <select name="livres">  
+                    <option value="" selected>--- Choisissez un livre ---</option>
+                    <option value="book1">Le grand livre de Javascript </option>  
+                   <option value="book2">HTML encore plus vite</option>  
+                    <option value="book3">Le guide pour bien débuter en CSharp</option>  
+                    <option value="book4">Angular pour les nuls</option>  
+                    <option value="book5">Formation Java</option>  
+                    <option value="book6">Comment créer son site web</option>  
+                    <option value="book7">PHP pour les nuls</option>  
+                </select>
+            </td>
+            <td><input id="ref1" type="text"></td>
+            <td><input id="qte1" type="number" value="0" step="1" min="0" onchange="calcTot(this)"></td>
+            <td><input id="prixU1" type="number" value="0" step="0.01" min="0" onchange="calcTot(this)"></td>
+            <td><input id="tot1" type="text" value="0" readonly></td>
+        </tr>
+        <tr>
+            <td>
+                <select name="livres">  
+                    <option value="" selected>--- Choisissez un livre ---</option>
+                    <option value="book1">Le grand livre de Javascript </option>  
+                   <option value="book2">HTML encore plus vite</option>  
+                    <option value="book3">Le guide pour bien débuter en CSharp</option>  
+                    <option value="book4">Angular pour les nuls</option>  
+                    <option value="book5">Formation Java</option>  
+                    <option value="book6">Comment créer son site web</option>  
+                    <option value="book7">PHP pour les nuls</option>  
+                </select>
+            </td>
+            <td><input id="ref2" type="text"></td>
+            <td><input id="qte2" type="number" value="0" step="1" min="0" onchange="calcTot(this)"></td>
+            <td><input id="prixU2" type="number" value="0" step="0.01" min="0" onchange="calcTot(this)"></td>
+            <td><input id="tot2" type="text" value="0" readonly></td>
+        </tr>
+        <tr>
+            <td>
+                <select name="livres">  
+                    <option value="" selected>--- Choisissez un livre ---</option>
+                    <option value="book1">Le grand livre de Javascript </option>  
+                   <option value="book2">HTML encore plus vite</option>  
+                    <option value="book3">Le guide pour bien débuter en CSharp</option>  
+                    <option value="book4">Angular pour les nuls</option>  
+                    <option value="book5">Formation Java</option>  
+                    <option value="book6">Comment créer son site web</option>  
+                    <option value="book7">PHP pour les nuls</option>  
+                </select>
+            </td>
+            <td><input id="ref3" type="text"></td>
+            <td><input id="qte3" type="number" value="0" step="1" min="0" onchange="calcTot(this)"></td>
+            <td><input id="prixU3" type="number" value="0" step="0.01" min="0" onchange="calcTot(this)"></td>
+            <td><input id="tot3" type="text" value="0" readonly></td>
+        </tr>
+        <tr>
+            <td>
+                <select name="livres">  
+                    <option value="" selected>--- Choisissez un livre ---</option>
+                    <option value="book1">Le grand livre de Javascript </option>  
+                   <option value="book2">HTML encore plus vite</option>  
+                    <option value="book3">Le guide pour bien débuter en CSharp</option>  
+                    <option value="book4">Angular pour les nuls</option>  
+                    <option value="book5">Formation Java</option>  
+                    <option value="book6">Comment créer son site web</option>  
+                    <option value="book7">PHP pour les nuls</option>  
+                </select>
+            </td>
+            <td><input id="ref4" type="text"></td>
+            <td><input id="qte4" type="number" value="0" step="1" min="0" onchange="calcTot(this)"></td>
+            <td><input id="prixU4" type="number" value="0" step="0.01" min="0" onchange="calcTot(this)"></td>
+            <td><input id="tot4" type="text" value="0" readonly></td>
+        </tr>
+        <tr>
+            <td>
+                <select name="livres">  
+                    <option value="" selected>--- Choisissez un livre ---</option>
+                    <option value="book1">Le grand livre de Javascript </option>  
+                   <option value="book2">HTML encore plus vite</option>  
+                    <option value="book3">Le guide pour bien débuter en CSharp</option>  
+                    <option value="book4">Angular pour les nuls</option>  
+                    <option value="book5">Formation Java</option>  
+                    <option value="book6">Comment créer son site web</option>  
+                    <option value="book7">PHP pour les nuls</option>  
+                </select>
+            </td>
+            <td><input id="ref5" type="text"></td>
+            <td><input id="qte5" type="number" value="0" step="1" min="0" onchange="calcTot(this)"></td>
+            <td><input id="prixU5" type="number" value="0" step="0.01" min="0" onchange="calcTot(this)"></td>
+            <td><input id="tot5" type="text" value="0" readonly></td>
+        </tr>
+        <tr>
+            <td>
+                <select name="livres">  
+                    <option value="" selected>--- Choisissez un livre ---</option>
+                    <option value="book1">Le grand livre de Javascript </option>  
+                   <option value="book2">HTML encore plus vite</option>  
+                    <option value="book3">Le guide pour bien débuter en CSharp</option>  
+                    <option value="book4">Angular pour les nuls</option>  
+                    <option value="book5">Formation Java</option>  
+                    <option value="book6">Comment créer son site web</option>  
+                    <option value="book7">PHP pour les nuls</option>  
+                </select>
+            </td>
+            <td><input id="ref6" type="text"></td>
+            <td><input id="qte6" type="number" value="0" step="1" min="0" onchange="calcTot(this)"></td>
+            <td><input id="prixU6" type="number" value="0" step="0.01" min="0" onchange="calcTot(this)"></td>
+            <td><input id="tot6" type="text" value="0" readonly></td>
+        </tr>
+        <tr>
+            <td>
+                <select name="livres">  
+                    <option value="" selected>--- Choisissez un livre ---</option>
+                    <option value="book1">Le grand livre de Javascript </option>  
+                   <option value="book2">HTML encore plus vite</option>  
+                    <option value="book3">Le guide pour bien débuter en CSharp</option>  
+                    <option value="book4">Angular pour les nuls</option>  
+                    <option value="book5">Formation Java</option>  
+                    <option value="book6">Comment créer son site web</option>  
+                    <option value="book7">PHP pour les nuls</option>  
+                </select>
+            </td>
+            <td><input id="ref7" type="text"></td>
+            <td><input id="qte7" type="number" value="0" step="1" min="0" onchange="calcTot(this)"></td>
+            <td><input id="prixU7" type="number" value="0" step="0.01" min="0" onchange="calcTot(this)"></td>
+            <td><input id="tot7" type="text" value="0" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+            <td colspan="2">
+                <hr/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+            <td>Total</td>
+            <td><input id="TotFin" type="text" value="0" readonly></td>
+        </tr>
+    </table>
+    <script>
+        var q1, q2, q3, q4, q5, q6, q7, prixU1, prixU2, prixU3, prixU4, prixU5, prixU6, prixU7, prblm = false;
+
+        function checkFormat(decl) {
+            var val = decl.value,
+                indexPt = val.indexOf('.'),
+                indexVir = val.indexOf(',');
+
+            if (prblm) {
+                prblm = false;
+            } else {
+                if ((indexPt == 0) || (indexVir == 0)) {
+                    alert('Votre saisie commence par un point ou une virgule');
+                    decl.focus();
+                    prblm = true;
+                    return false;
+                }
+                if ((indexPt == val.length - 1) || (indexVir == val.length - 1)) {
+                    alert('Votre saisie finit par un point ou une virgule');
+                    decl.focus();
+                    prblm = true;
+                    return false;
+                }
+                if (indexPt != val.lastIndexOf('.')) {
+                    alert('Votre saisie contient au moins 2 points');
+                    decl.focus();
+                    prblm = true;
+                    return false;
+                }
+                if (indexVir != val.lastIndexOf(',')) {
+                    alert('Votre saisie contient au moins 2 virgules');
+                    decl.focus();
+                    prblm = true;
+                    return false;
+                }
+                // contrôle de la présence d'une virgule et d'un point
+                if ((val.indexOf(',') >= 0) && (val.indexOf('.') >= 0)) {
+                    alert('Votre saisie contient une virgule et un point');
+                    decl.focus();
+                    prblm = true;
+                    return false;
+                }
+                if (!prblm) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+
+        function calcTot(decl) {
+            if (checkFormat(decl)) {
+                var sub,
+                    qt1 = document.getElementById('qte1').value,
+                    qt2 = document.getElementById('qte2').value,
+                    qt3 = document.getElementById('qte3').value,
+                    qt4 = document.getElementById('qte4').value,
+                    qt5 = document.getElementById('qte5').value,
+                    qt6 = document.getElementById('qte6').value,
+                    qt7 = document.getElementById('qte7').value,
+                    pu1 = document.getElementById('prixU1').value,
+                    pu2 = document.getElementById('prixU2').value,
+                    pu3 = document.getElementById('prixU3').value,
+                    pu4 = document.getElementById('prixU4').value,
+                    pu5 = document.getElementById('prixU5').value,
+                    pu6 = document.getElementById('prixU6').value,
+                    pu7 = document.getElementById('prixU7').value,
+                    st1 = document.getElementById('tot1'),
+                    st2 = document.getElementById('tot2'),
+                    st3 = document.getElementById('tot3'),
+                    st4 = document.getElementById('tot4'),
+                    st5 = document.getElementById('tot5'),
+                    st6 = document.getElementById('tot6'),
+                    st7 = document.getElementById('tot7');
+
+                if (qt1.indexOf(',') >= 0) {
+                    var indexFoundVir = qt1.indexOf(',');
+                    sub = qt1.substring(indexFoundVir + 1);
+                    qt1 = parseFloat(qt1) + '.' + sub;
+                }
+                if (qt2.indexOf(',') >= 0) {
+                    var indexFoundVir = qt2.indexOf(',');
+                    sub = qt2.substring(indexFoundVir + 1);
+                    qt2 = parseFloat(qt2) + '.' + sub;
+                }
+                if (qt3.indexOf(',') >= 0) {
+                    var indexFoundVir = qt3.indexOf(',');
+                    sub = qt3.substring(indexFoundVir + 1);
+                    qt3 = parseFloat(qt3) + '.' + sub;
+                }
+                if (qt4.indexOf(',') >= 0) {
+                    var indexFoundVir = qt4.indexOf(',');
+                    sub = qt4.substring(indexFoundVir + 1);
+                    qt4 = parseFloat(qt4) + '.' + sub;
+                }
+                if (qt5.indexOf(',') >= 0) {
+                    var indexFoundVir = qt5.indexOf(',');
+                    sub = qt5.substring(indexFoundVir + 1);
+                    qt5 = parseFloat(qt5) + '.' + sub;
+                }
+                if (qt6.indexOf(',') >= 0) {
+                    var indexFoundVir = qt6.indexOf(',');
+                    sub = qt6.substring(indexFoundVir + 1);
+                    qt6 = parseFloat(qt6) + '.' + sub;
+                }
+                if (qt7.indexOf(',') >= 0) {
+                    var indexFoundVir = qt7.indexOf(',');
+                    sub = qt7.substring(indexFoundVir + 1);
+                    qt7 = parseFloat(qt7) + '.' + sub;
+                }
+
+                if (pu1.indexOf(',') >= 0) {
+                    var indexFoundVir = pu1.indexOf(',');
+                    sub = pu1.substring(indexFoundVir + 1);
+                    qt1 = parseFloat(pu1) + '.' + sub;
+                }
+                if (pu2.indexOf(',') >= 0) {
+                    var indexFoundVir = pu2.indexOf(',');
+                    sub = pu2.substring(indexFoundVir + 1);
+                    pu2 = parseFloat(pu2) + '.' + sub;
+                }
+                if (pu3.indexOf(',') >= 0) {
+                    var indexFoundVir = pu3.indexOf(',');
+                    sub = pu3.substring(indexFoundVir + 1);
+                    pu3 = parseFloat(pu3) + '.' + sub;
+                }
+                if (pu4.indexOf(',') >= 0) {
+                    var indexFoundVir = pu4.indexOf(',');
+                    sub = pu4.substring(indexFoundVir + 1);
+                    pu4 = parseFloat(pu4) + '.' + sub;
+                }
+                if (pu5.indexOf(',') >= 0) {
+                    var indexFoundVir = pu5.indexOf(',');
+                    sub = pu5.substring(indexFoundVir + 1);
+                    pu5 = parseFloat(pu5) + '.' + sub;
+                }
+                if (pu6.indexOf(',') >= 0) {
+                    var indexFoundVir = pu6.indexOf(',');
+                    sub = pu6.substring(indexFoundVir + 1);
+                    pu6 = parseFloat(pu6) + '.' + sub;
+                }
+                if (pu7.indexOf(',') >= 0) {
+                    var indexFoundVir = pu7.indexOf(',');
+                    sub = pu7.substring(indexFoundVir + 1);
+                    pu7 = parseFloat(pu7) + '.' + sub;
+                }
+
+                st1.value = parseFloat(qt1) * parseFloat(pu1);
+                st2.value = parseFloat(qt2) * parseFloat(pu2);
+                st3.value = parseFloat(qt3) * parseFloat(pu3);
+                st4.value = parseFloat(qt4) * parseFloat(pu4);
+                st5.value = parseFloat(qt5) * parseFloat(pu5);
+                st6.value = parseFloat(qt6) * parseFloat(pu6);
+                st7.value = parseFloat(qt7) * parseFloat(pu7);
+                total = parseFloat(st1.value) + parseFloat(st2.value) + parseFloat(st3.value) + parseFloat(st4.value) + parseFloat(st5.value) + parseFloat(st6.value) + parseFloat(st7.value);
+
+                document.getElementById("TotFin").value = total;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 3</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>AMPOULE MAGIQUE</h1>
+    <img src="img/AmpouleHS.GIF" alt="Ampoule" id="amp" onclick="changeImage()" />
+    <h2>Cliquer sur l'ampoule pour l'allumer ou l'éteindre</h2>
+    <script type="text/javascript">
+        function changeImage() {
+            var imgId = document.getElementById("amp");
+            if (imgId.src.match("img/AmpouleHS.GIF")) {
+                imgId.src = "img/AmpouleOK.GIF";
+            } else {
+                imgId.src = "img/AmpouleHS.GIF";
+            }
+        }
+    </script>
+</body>
+
+</html>

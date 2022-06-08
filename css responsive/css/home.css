@@ -1,0 +1,100 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+    background-color: rgb(239, 195, 182);
+}
+
+img {
+    max-width: 100%;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header h1 span {
+    padding: 0.3125em;
+    border: 0.125em dotted black;
+}
+
+nav {
+    border: 0.0625em solid black;
+    width: 100%;
+    -moz-border-radius: 0.625em;
+    -webkit-border-radius: 0.625em;
+    margin-bottom: .9375em;
+}
+
+nav ul {
+    margin: 0.3125em auto;
+    padding: 0.3125em;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0.3125em;
+    padding: 0.1875em;
+    text-align: center;
+    border: 0.0625em solid black;
+    -moz-border-radius: 0.625em;
+    -webkit-border-radius: 0.625em;
+    box-shadow: 0.125em 0.125em 0.25em #aaa;
+    -moz-box-shadow: 0.125em 0.125em 0.25em #aaa;
+    -webkit-box-shadow: 0.125em 0.125em 0.25em #aaa;
+    cursor: pointer;
+}
+
+nav ul li.active {
+    background-color: rgb(150, 124, 116);
+    font-weight: bold;
+}
+
+main {
+    border: 0.0625em solid black;
+    margin-bottom: 15px;
+    text-align: center;
+    -moz-border-radius: 0.625em;
+    -webkit-border-radius: 0.625em;
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
+#gallery {
+    border: 0.0625em solid black;
+    text-align: center;
+    -moz-border-radius: 0.625em;
+    -webkit-border-radius: 0.625em;
+}
+
+#gallery a {
+    display: inline-block;
+    width: 40%;
+    max-width: 10em;
+    border: 0.0625em dotted black;
+    vertical-align: middle;
+    padding: 0.25em;
+    margin: 0.3125em;
+}
+
+#gallery a:hover {
+    transition: all .3s ease-in-out;
+    transform: scale(.9) rotate(-5deg);
+}
+
+#grandeImage {
+    height: 36.25em;
+    margin-top: 0.9375em;
+}
+
+#textesImage {
+    margin: 0.625em;
+}
+
+.justified {
+    text-align: justify;
+}

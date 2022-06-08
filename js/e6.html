@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 6</title>
+    <style>
+        body {
+            background-color: lightskyblue;
+            font-family: 'Georgia';
+        }
+        
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid white;
+            width: 50%;
+            background-color: tan;
+        }
+        
+        table tr td {
+            width: 15%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Qté :</td>
+            <td><input id="Qte1" type="number" value="1" step="1" min="0" onchange="calcTot(this)"></td>
+            <td>Prix unitaire : </td>
+            <td><input id="PrixU1" type="number" value="0" step="0.01" min="0" onchange="calcTot(this)"></td>
+            <td>Prix : </td>
+            <td><input id="Tot1" type="text" value="0" readonly></td>
+        </tr>
+        <tr>
+            <td>Qté :</td>
+            <td><input id="Qte2" type="number" value="1" step="1" min="0" onchange="calcTot(this)"></td>
+            <td>Prix unitaire : </td>
+            <td><input id="PrixU2" type="number" value="0" step="0.01" min="0" onchange="calcTot(this)"></td>
+            <td>Prix : </td>
+            <td><input id="Tot2" type="text" value="0" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+            <td>
+                <hr/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+            <td><input id="TotFin" type="text" value="0" readonly></td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+        var q1, q2, prixU1, prixU2, prblm = false;
+
+        function checkFormat(decl) {
+            var val = decl.value,
+                indexPt = val.indexOf('.'),
+                indexVir = val.indexOf(',');
+
+
+            if (prblm) {
+                prblm = false;
+            } else {
+                if ((indexPt == 0) || (indexVir == 0)) {
+                    alert('Votre saisie commence par un point ou une virgule');
+                    decl.focus();
+                    prblm = true;
+                    return false;
+                }
+                if ((indexPt == val.length - 1) || (indexVir == val.length - 1)) {
+                    alert('Votre saisie finit par un point ou une virgule');
+                    decl.focus();
+                    prblm = true;
+                    return false;
+                }
+                if (indexPt != val.lastIndexOf('.')) {
+                    alert('Votre saisie contient au moins 2 points');
+                    decl.focus();
+                    prblm = true;
+                    return false;
+                }
+                if (indexVir != val.lastIndexOf(',')) {
+                    alert('Votre saisie contient au moins 2 virgules');
+                    decl.focus();
+                    prblm = true;
+                    return false;
+                }
+                // contrôle de la présence d'une virgule et d'un point
+                if ((val.indexOf(',') >= 0) && (val.indexOf('.') >= 0)) {
+                    alert('Votre saisie contient une virgule et un point');
+                    decl.focus();
+                    prblm = true;
+                    return false;
+                }
+                if (!prblm) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+
+        function calcTot(decl) {
+            if (checkFormat(decl)) {
+                var sub, qt1 = document.getElementById('Qte1').value,
+                    qt2 = document.getElementById('Qte2').value,
+                    pu1 = document.getElementById('PrixU1').value,
+                    pu2 = document.getElementById('PrixU2').value,
+                    st1 = document.getElementById('Tot1'),
+                    st2 = document.getElementById('Tot2');
+
+                if (qt1.indexOf(',') >= 0) {
+                    var indexFoundVir = qt1.indexOf(',');
+                    sub = qt1.substring(indexFoundVir + 1);
+                    qt1 = parseFloat(qt1) + '.' + sub;
+                }
+                if (qt2.indexOf(',') >= 0) {
+                    var indexFoundVir = qt2.indexOf(',');
+                    sub = qt2.substring(indexFoundVir + 1);
+                    qt2 = parseFloat(qt2) + '.' + sub;
+                }
+                if (pu1.indexOf(',') >= 0) {
+                    var indexFoundVir = pu1.indexOf(',');
+                    sub = pu1.substring(indexFoundVir + 1);
+                    qt1 = parseFloat(pu1) + '.' + sub;
+                }
+                if (pu2.indexOf(',') >= 0) {
+                    var indexFoundVir = pu2.indexOf(',');
+                    sub = pu2.substring(indexFoundVir + 1);
+                    pu2 = parseFloat(pu2) + '.' + sub;
+                }
+
+                st1.value = parseFloat(qt1) * parseFloat(pu1);
+                st2.value = parseFloat(qt2) * parseFloat(pu2);
+                total = parseFloat(st1.value) + parseFloat(st2.value);
+
+                document.getElementById("TotFin").value = total;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 5</title>
+</head>
+
+<body>
+    <h1>Cliquez sur l'image pour ouvrir une nouvelle fenêtre</h1>
+    <img src="img/ATTENT.JPG" onclick="openPopup()">
+    <br/><br/>
+    <input type="button" value="Fermer le popup" onclick="closePopup()" />
+    <input type="button" value="Déplacer le popup" onclick="movePopup()" />
+    <input type="button" value="Réduire le popup" onclick="reducePopup()" />
+    <script type="text/javascript">
+        var winPop;
+
+        function openPopup() {
+            winPop = window.open("e5pop.html", "AaAaAaa", 'width=250 , height=200, toolbar=no, location=no, directories=no, status=no, menubar=no, scroolbars=no, resizable=no, top=300, left=400');
+        }
+
+        function closePopup() {
+            winPop.close();
+        }
+
+        function movePopup() {
+            winPop.focus();
+            winPop.moveBy(100, 0);
+        }
+
+        function reducePopup() {
+            var largeur = (winPop.document.body.offsetWidth / 5) * 4;
+            var hauteur = (winPop.document.body.offsetHeight / 5) * 4;
+            winPop.resizeTo(largeur, hauteur);
+            winPop.focus();
+        } //ne fonctionne pas
+    </script>
+</body>
+
+</html>

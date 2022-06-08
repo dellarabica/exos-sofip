@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2</title>
+</head>
+
+<body>
+    <input type="text" id="date" value="">
+    <input type="button" value="date" onclick="setDate()">
+    <br/>
+    <input type="text" id="hour" value="">
+    <input type="button" value="Heure" onclick="setHour()">
+    <script type="text/javascript">
+        function setDate() {
+            const d = new Date();
+            var month = d.getMonth();
+            var year = d.getFullYear();
+            var day = d.getDate();
+
+            var fullDate = year + " - " + month + " - " + day;
+            document.getElementById('date').value = fullDate;
+        }
+
+        function setHour() {
+            const d = new Date();
+            var hour = d.getHours();
+            var min = d.getMinutes();
+
+            var fullHour = hour + " : " + min;
+            document.getElementById('hour').value = fullHour;
+        }
+    </script>
+</body>
+
+</html>

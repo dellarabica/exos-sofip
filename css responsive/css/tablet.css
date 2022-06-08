@@ -1,0 +1,21 @@
+@media screen and (min-width: 551px) and (max-width: 780px) {
+    html {
+        font-size: 0.875em;
+    }
+    nav {
+        max-height: 90px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    main {
+        height: 43em;
+        width: 70%;
+    }
+    #gallery {
+        height: 43em;
+    }
+    #gallery a {
+        width: 27%;
+    }
+}

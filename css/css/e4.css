@@ -1,0 +1,84 @@
+body {
+    background-color: #c6c0a0;
+    font-family: Georgia;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+h2 {
+    color: #7d775c;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 2em;
+}
+
+h3 {
+    color: #7d775c;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+}
+
+ul li {
+    margin: 12px;
+}
+
+.lang {
+    color: green;
+}
+
+#len {
+    color: red;
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+
+#contenu {
+    width: 75%;
+    font-size: 75%;
+    background-color: white;
+    color: #555753;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 8px 8px 12px #aaa;
+    -moz-box-shadow: 8px 8px 12px #aaa;
+    -webkit-box-shadow: 8px 8px 12px #aaa;
+    float: right;
+    display: block;
+}
+
+#menu {
+    margin: 0;
+    padding: 0;
+    font: bold 1em "georgia", verdana;
+    display: block;
+    float: left;
+}
+
+#menu ul {
+    list-style-type: none;
+}
+
+#menu a {
+    display: block;
+    color: #508768;
+    background-color: #BDD7B5;
+    text-decoration: none;
+    line-height: 2em;
+    border: 1px solid blue;
+    text-align: center;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 8px 8px 12px #aaa;
+    -moz-box-shadow: 8px 8px 12px #aaa;
+    -webkit-box-shadow: 8px 8px 12px #aaa;
+}
+
+#menu a:hover,
+#menu a:focus {
+    color: #BDD7B5;
+    background-color: #508768;
+}

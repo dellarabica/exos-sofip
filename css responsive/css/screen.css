@@ -1,0 +1,19 @@
+@media screen and (min-width:781px) {
+    html {
+        font-size: 1em;
+    }
+    nav ul li {
+        width: 31%;
+    }
+    main {
+        float: right;
+        width: 66%;
+        height: 45em;
+    }
+    #gallery {
+        float: left;
+        width: 33%;
+        height: 45em;
+        overflow-y: auto;
+    }
+}

@@ -1,0 +1,16 @@
+#menu {
+    margin: 0;
+    padding: 0;
+    font: bold 1em "georgia", verdana;
+    list-style-type: none;
+}
+
+#menu a {
+    color: #508768;
+    text-decoration: none;
+}
+
+#menu a:hover,
+#menu a:focus {
+    color: #BDD7B5;
+}

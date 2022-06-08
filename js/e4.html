@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 4</title>
+    <style>
+        #indic {
+            font-size: 0.75em;
+        }
+        
+        body {
+            font-size: 1.125em;
+        }
+        
+        table tr td {
+            padding-right: 0.9375em;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" name="form" action="e4-2.html" onsubmit="return verif()">
+        <table>
+            <tr>
+                <td>Nom *</td>
+                <td><input type="text" id="name" required></td>
+                <td id="cNom"> </td>
+            </tr>
+            <tr>
+                <td>Prénom *</td>
+                <td><input type="text" id="surname" required></td>
+                <td id="cPrenom"> </td>
+            </tr>
+            <tr>
+                <td>Numéro de membre</td>
+                <td><input type="text" id="numMember" maxlength="8"></td>
+                <td id="cNum"> </td>
+            </tr>
+            <tr>
+                <td>Adresse *</td>
+                <td><input type="text" id="address" required></td>
+                <td id="cAddress"> </td>
+            </tr>
+            <tr>
+                <td>Ville *</td>
+                <td><input type="text" id="city" required></td>
+                <td id="cCity"> </td>
+            </tr>
+            <tr>
+                <td>Code postal *</td>
+                <td><input type="text" id="code" maxlength="5" required></td>
+                <td id="cCP"> </td>
+            </tr>
+            <tr>
+                <td>Adresse mail</td>
+                <td><input type="text" id="mail"></td>
+                <td id="cMail"> </td>
+            </tr>
+            <tr>
+                <td>Téléphone</td>
+                <td><input type="text" id="phone" maxlength="10"></td>
+                <td id="cTel"> </td>
+            </tr>
+        </table>
+        <input type="submit" value="Envoyer">
+        <p id="indic">
+            * Champs obligatoires <br/> Les accents ne sont pas autorisés.
+        </p>
+    </form>
+
+
+
+    <script type="text/javascript">
+        //regex
+        var regexNom = /^\w[A-z\-]{3,}$/;
+        var regexMembre = /^\d{8}$/;
+        var regexAdr = /^([0-9]*) ?([a-zA-Z,\. ]*)$/;
+        var regexCode = /^[0-9]{5}$/;
+        var regexMail = /^[a-z][a-z0-9_\-\.]+@[a-z0-9_\-\.]+\.[a-z]{2,3}$/;
+        var regexTel = /^[0-9]{10}$/;
+
+        function checkNom(valEntree) {
+            if (regexNom.test(valEntree) == true) {
+                document.getElementById('cNom').innerHTML = "PASS";
+                return true;
+            } else {
+                document.getElementById('cNom').innerHTML = "FAIL";
+                return false;
+            }
+        }
+
+        function checkPrenom(valEntree) {
+            if (regexNom.test(valEntree) == true) {
+                document.getElementById('cPrenom').innerHTML = "PASS";
+                return true;
+            } else {
+                document.getElementById('cPrenom').innerHTML = "FAIL";
+                return false;
+            }
+        }
+
+        function checkNum(valEntree) {
+            if (regexMembre.test(valEntree) == true) {
+                document.getElementById('cNum').innerHTML = "PASS";
+                return true;
+            } else {
+                document.getElementById('cNum').innerHTML = "FAIL";
+                return false;
+            }
+        }
+
+        function checkAdr(valEntree) {
+            if (regexAdr.test(valEntree) == true) {
+                document.getElementById('cAddress').innerHTML = "PASS";
+                return true;
+            } else {
+                document.getElementById('cAddress').innerHTML = "FAIL";
+                return false;
+            }
+        }
+
+        function checkCity(valEntree) {
+            if (regexNom.test(valEntree) == true) {
+                document.getElementById('cCity').innerHTML = "PASS";
+                return true;
+            } else {
+                document.getElementById('cCity').innerHTML = "FAIL";
+                return false;
+            }
+        }
+
+        function checkCP(valEntree) {
+            if (regexCode.test(valEntree) == true) {
+                document.getElementById('cCP').innerHTML = "PASS";
+                return true;
+            } else {
+                document.getElementById('cCP').innerHTML = "FAIL";
+                return false;
+            }
+        }
+
+        function checkMail(valEntree) {
+            if (regexMail.test(valEntree) == true) {
+                document.getElementById('cMail').innerHTML = "PASS";
+                return true;
+            } else {
+                document.getElementById('cMail').innerHTML = "FAIL";
+                return false;
+            }
+        }
+
+        function checkTel(valEntree) {
+            if (regexTel.test(valEntree) == true) {
+                document.getElementById('cTel').innerHTML = "PASS";
+                return true;
+            } else {
+                document.getElementById('cTel').innerHTML = "FAIL";
+                return false;
+            }
+        }
+
+        function verif() {
+            //valeurs des textbox
+            var valNom = document.getElementById("name").value;
+            var valPrenom = document.getElementById("surname").value;
+            var valMembre = document.getElementById("numMember").value;
+            var valAdr = document.getElementById("address").value;
+            var valCity = document.getElementById("city").value;
+            var valCP = document.getElementById("code").value;
+            var valMail = document.getElementById("mail").value;
+            var valTel = document.getElementById("phone").value;
+
+            //vérif de si les regex sont respectées
+            var verifNom = checkNom(valNom);
+            var verifPrenom = checkPrenom(valPrenom);
+            var verifMembre = checkNum(valMembre);
+            var verifAdr = checkAdr(valAdr);
+            var verifCity = checkCity(valCity);
+            var verifCP = checkCP(valCP);
+            var verifMail = checkMail(valMail);
+            var verifTel = checkTel(valTel);
+
+            if (verifNom == false || verifPrenom == false || verifMembre == false || verifAdr == false || verifCity == false || verifCP == false || verifMail == false || verifTel == false) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

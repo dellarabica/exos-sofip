@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/phone.css">
+    <title>Picturebox</title>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <header>
+            <h1><span>La PictureBox de Benoît</span></h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li class="active" onclick="active(this);">
+                    Anime
+                </li>
+                <li onclick="active(this);">
+                    Séries
+                </li>
+                <li onclick="active(this);">
+                    Films
+                </li>
+                <li onclick="active(this);">
+                    Portraits
+                </li>
+                <li onclick="active(this);">
+                    Albums
+                </li>
+                <li onclick="active(this);">
+                    Animation
+                </li>
+            </ul>
+        </nav>
+
+        <aside>
+            <div id="gallery">
+                <a href="" onclick="return false;"><img src="img/small/img01.jpg" onclick="affiche(this);" alt="Lorem." title="img1"></a>
+                <a href="" onclick="return false;"><img src="img/small/img02.jpg" onclick="affiche(this);" alt="Lorem, ipsum." title="img2"></a>
+                <a href="" onclick="return false;"><img src="img/small/img03.jpg" onclick="affiche(this);" alt="Lorem, ipsum dolor." title="img3"></a>
+                <a href="" onclick="return false;"><img src="img/small/img04.jpg" onclick="affiche(this);" alt="Lorem ipsum dolor sit." title="img4"></a>
+                <a href="" onclick="return false;"><img src="img/small/img05.jpg" onclick="affiche(this);" alt="Lorem ipsum dolor sit amet." title="img5"></a>
+                <a href="" onclick="return false;"><img src="img/small/img06.jpg" onclick="affiche(this);" alt="Lorem ipsum dolor sit amet consectetur." title="img6"></a>
+                <a href="" onclick="return false;"><img src="img/small/img07.jpg" onclick="affiche(this);" alt="Lorem ipsum dolor sit amet consectetur adipisicing." title="img7"></a>
+                <a href="" onclick="return false;"><img src="img/small/img08.jpg" onclick="affiche(this);" alt="Lorem ipsum dolor sit amet consectetur, adipisicing elit." title="img8"></a>
+                <a href="" onclick="return false;"><img src="img/small/img09.jpg" onclick="affiche(this);" alt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum." title="img9"></a>
+                <a href="" onclick="return false;"><img src="img/small/img10.jpg" onclick="affiche(this);" alt="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, reiciendis?" title="img10"></a>
+            </div>
+        </aside>
+
+        <main>
+
+            <img id="grandeImage" src="img/img01.jpg" />
+            <div id="textesImage">
+                <h2 id="titreGrandeImage">Lorem reprehenderit officia sunt nulla elit.</h2>
+                <p id="texteGrandeImage" class="justified">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam dolore sunt eos eum explicabo quibusdam unde fuga autem deleniti quis officia cupiditate, modi voluptate, et laudantium vel pariatur ad nemo!</p>
+            </div>
+        </main>
+    </div>
+
+    <script type="text/javascript" src="js/picturebox.js"></script>
+</body>
+
+</html>

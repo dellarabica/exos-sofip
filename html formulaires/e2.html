@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Enquête</title>
+    <style>
+        h1,
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form method="get" action="thx.html">
+        <h1>Nous lançons une grande enquête sur les anciens stagiaires</h1>
+        <h3>Merci de nous répondre</h3>
+        <br/><br/>
+
+        <p><input type="text" name="nom" required/> Votre nom *</p>
+        <p><input type="text" name="prenom" required/> Votre prénom *</p>
+        <p><input type="date" name="naissance" required/> Votre date de naissance *</p>
+        <p><input type="text" name="adresse" required/> Votre adresse *</p>
+        <p><input type="text" name="ville" required/> Votre ville *</p>
+        <p><input type="number" name="cp" required maxlength="5" /> Votre code postal *</p>
+        <p><input type="email" name="mail" required/> Votre e-mail *</p>
+        <p>Vous êtes :</p>
+        <ol>
+            <li><input type="radio" name="genre" value="H" /> Un homme
+            </li>
+            <li><input type="radio" name="genre" value="F" />Une femme</li>
+        </ol>
+
+        <p>
+            <input type="text" list="metiers" name="metiers" required/> Votre métier *
+        </p>
+        <datalist id=metiers>
+            <option>Développeur</option>
+            <option>Analyste</option>
+            <option>Chef de projet</option>
+            <option>Autre</option>
+        </datalist>
+        <p>
+            <input type="text" list="salaire" name="salaire" required/> Votre salaire *
+        </p>
+        <datalist id=salaire>
+            <option> < 1000€</option>
+            <option> > 1000€ et < 1500€</option>
+            <option> 1500€ et < 2000€</option>
+            <option> > 2000€</option>
+        </datalist>
+
+        <p><input type="number" name="anneestage" required maxlength="4" /> En quelle année avez-vous suivi le stage de l'AFPA ? *</p>
+        <p><input type="text" name="comm" placeholder="Vos commentaires" /></p>
+
+        <p>
+            <input type="submit" value="Valider" />
+            <a href="e2.html"><input type="button" value="Annuler" /></a>
+            <small>* Champs requis</small>
+        </p>
+    </form>
+
+</body>
+</html

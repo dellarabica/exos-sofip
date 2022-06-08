@@ -1,0 +1,26 @@
+html body {
+    /* background-color: grey; */
+    font-family: 'Georgia';
+}
+
+#header {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#header .row .col {
+    font-weight: bold;
+}
+
+body hr {
+    margin-top: 0;
+    width: 100%;
+    height: 10px;
+    background: red;
+}
+
+#aboutme {
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: justify;
+}

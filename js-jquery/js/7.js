@@ -1,12 +1,11 @@
-function showSub(id) {
-    var name = "sub" + id;
-    if (document.getElementById(name).style.display != "block") {
-        document.getElementById(name).style.display = "block";
+$('div.main').mouseover(function() {
+    if ($('#sub' + this.id).css("display") != "block") {
+        $('#sub' + this.id).css("display", "block");
     }
-}
+})
 
-function hideSub(id) {
-    if (document.getElementById(id).style.display != "none") {
-        document.getElementById(id).style.display = "none";
+$('div.sub').click(function() {
+    if ($('#' + this.id).css("display") != "none") {
+        $('#' + this.id).css("display", "none");
     }
-}
+})

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: cadetblue;
+        }
+        
+        h1 {
+            color: white;
+        }
+        
+        p {
+            margin-left: 0.625em
+        }
+        
+        .sub {
+            color: brown;
+        }
+        
+        #sub1,
+        #sub2,
+        #sub3,
+        #sub4 {
+            display: none;
+        }
+    </style>
+    <title>Exercice 7</title>
+</head>
+
+<body>
+    <div id="1" onmouseover="showSub(this.id)">
+        <h1>CHAPITRE 1</h1>
+        <div id="sub1" class="sub" onclick="hideSub(this.id)">
+            <p>sous-chapitre 1-1</p>
+            <p>sous-chapitre 1-2</p>
+            <p>sous-chapitre 1-3</p>
+            <p>sous-chapitre 1-4</p>
+        </div>
+    </div>
+    <div id="2" onmouseover="showSub(this.id)">
+        <h1>CHAPITRE 2</h1>
+        <div id="sub2" class="sub" onclick="hideSub(this.id)">
+            <p><a href=#>sous-chapitre 2-1</a></p>
+            <p>sous-chapitre 2-2</p>
+            <p>sous-chapitre 2-3</p>
+            <p>sous-chapitre 2-4</p>
+        </div>
+    </div>
+    <div id="3" onmouseover="showSub(this.id)">
+        <h1>CHAPITRE 3</h1>
+        <div id="sub3" class="sub" onclick="hideSub(this.id)">
+            <p>sous-chapitre 3-1</p>
+            <p>sous-chapitre 3-2</p>
+            <p>sous-chapitre 3-3</p>
+            <p>sous-chapitre 3-4</p>
+        </div>
+    </div>
+    <div id="4" onmouseover="showSub(this.id)">
+        <h1>CHAPITRE 4</h1>
+        <div id="sub4" class="sub" onclick="hideSub(this.id)">
+            <p>sous-chapitre 4-1</p>
+            <p>sous-chapitre 4-2</p>
+            <p>sous-chapitre 4-3</p>
+            <p>sous-chapitre 4-4</p>
+        </div>
+    </div>
+    <script src="js/7.js">
+    </script>
+</body>
+
+</html>

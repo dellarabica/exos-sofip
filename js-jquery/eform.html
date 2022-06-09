@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice formulaires</title>
+    <style>
+        table {
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        table tbody tr td {
+            width: 16.66%;
+        }
+        
+        #label {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body onload="newLine()">
+    <h1>Prise de commande</h1>
+    <hr/>
+    <table>
+        <tbody id="tab">
+            <tr id="label">
+                <td>Libellé</td>
+                <td>Référence</td>
+                <td>Quantité</td>
+                <td>Prix unitaire</td>
+                <td>Prix</td>
+                <td></td>
+            </tr>
+            <tr id="lineTot">
+                <td colspan="3"></td>
+                <td colspan="2">
+                    <hr/>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="btn" id="addLine" value='+' onclick="newLine()" />
+                </td>
+                <td colspan="2"></td>
+                <td id="label">Total</td>
+                <td><input id="TotFin" type="text" value="0" readonly></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="js/dynamic.js">
+    </script>
+</body>
+
+</html>

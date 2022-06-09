@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 4</title>
+    <style>
+        #indic {
+            font-size: 0.75em;
+        }
+        
+        body {
+            font-size: 1.125em;
+        }
+        
+        table tr td {
+            padding-right: 0.9375em;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <form method="post" name="form" id="form1" action="e4-2.html">
+        <table>
+            <tr>
+                <td>Nom *</td>
+                <td><input type="text" id="name" required></td>
+                <td id="cNom"> </td>
+            </tr>
+            <tr>
+                <td>Prénom *</td>
+                <td><input type="text" id="surname" required></td>
+                <td id="cPrenom"> </td>
+            </tr>
+            <tr>
+                <td>Numéro de membre</td>
+                <td><input type="text" id="numMember" maxlength="8"></td>
+                <td id="cNum"> </td>
+            </tr>
+            <tr>
+                <td>Adresse *</td>
+                <td><input type="text" id="address" required></td>
+                <td id="cAddress"> </td>
+            </tr>
+            <tr>
+                <td>Ville *</td>
+                <td><input type="text" id="city" required></td>
+                <td id="cCity"> </td>
+            </tr>
+            <tr>
+                <td>Code postal *</td>
+                <td><input type="text" id="code" maxlength="5" required></td>
+                <td id="cCP"> </td>
+            </tr>
+            <tr>
+                <td>Adresse mail</td>
+                <td><input type="text" id="mail"></td>
+                <td id="cMail"> </td>
+            </tr>
+            <tr>
+                <td>Téléphone</td>
+                <td><input type="text" id="phone" maxlength="10"></td>
+                <td id="cTel"> </td>
+            </tr>
+        </table>
+        <input type="submit" value="Envoyer">
+        <p id="indic">
+            * Champs obligatoires <br/> Les accents ne sont pas autorisés.
+        </p>
+    </form>
+
+
+
+    <script src="js/4.js">
+    </script>
+</body>
+
+</html>

@@ -1,9 +1,9 @@
-function setDate() {
+$('#btnDate').click(function() {
     const d = new Date();
     $('#date').val(d.getFullYear() + " - " + d.getMonth() + " - " + d.getDate());
-}
+})
 
-function setHour() {
+$('#btnHour').click(function() {
     const d = new Date();
     $('#hour').val(d.getHours() + ' : ' + d.getMinutes() + ' : ' + d.getSeconds())
-}
+})

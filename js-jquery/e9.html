@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 9</title>
+    <style>
+        h2,
+        h3,
+        table tr td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Changement de couleurs</h2>
+
+    <table align="center">
+        <tr>
+            <td colspan="3">
+                <h3>Par la saisie d'un code Hexadecimal</h3>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" id="RougeHexa" name="Rouge" value="FF" onchange="ColorHexa(this)"></td>
+            <td><input type="text" id="VertHexa" name="Vert" value="FF" onchange="ColorHexa(this)"></td>
+            <td><input type="text" id="BleuHexa" name="Bleu" value="FF" onchange="ColorHexa(this)"></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <h3>Par la saisie d'un code RGB</h3>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" id="RougeRGB" name="Rouge" value="00" onchange="ColorRGB(this)"></td>
+            <td><input type="text" id="VertRGB" name="Vert" value="00" onchange="ColorRGB(this)"></td>
+            <td><input type="text" id="BleuRGB" name="Bleu" value="00" onchange="ColorRGB(this)"></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <h3>Par utilisation des boutons</h3>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" id="btnRouge" name="btnRouge" value="Rouge"></td>
+            <td><input type="button" id="btnVert" name="btnVert" value="Vert"></td>
+            <td><input type="button" id="btnBleu" name="btnBleu" value="Bleu"></td>
+        </tr>
+    </table>
+    <script src="js/9.js">
+    </script>
+</body>
+
+</html>

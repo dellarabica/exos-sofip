@@ -12,6 +12,7 @@
             text-align: center;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -24,9 +25,9 @@
             </td>
         </tr>
         <tr>
-            <td><input type="text" id="RougeHexa" name="Rouge" value="FF" onchange="ColorHexa(this)"></td>
-            <td><input type="text" id="VertHexa" name="Vert" value="FF" onchange="ColorHexa(this)"></td>
-            <td><input type="text" id="BleuHexa" name="Bleu" value="FF" onchange="ColorHexa(this)"></td>
+            <td><input type="text" id="RougeHexa" name="Rouge" value="FF" maxlength="2"></td>
+            <td><input type="text" id="VertHexa" name="Vert" value="FF" maxlength="2"></td>
+            <td><input type="text" id="BleuHexa" name="Bleu" value="FF" maxlength="2"></td>
         </tr>
         <tr>
             <td colspan="3">
@@ -34,9 +35,9 @@
             </td>
         </tr>
         <tr>
-            <td><input type="text" id="RougeRGB" name="Rouge" value="00" onchange="ColorRGB(this)"></td>
-            <td><input type="text" id="VertRGB" name="Vert" value="00" onchange="ColorRGB(this)"></td>
-            <td><input type="text" id="BleuRGB" name="Bleu" value="00" onchange="ColorRGB(this)"></td>
+            <td><input type="text" id="RougeRGB" name="Rouge" value="00" maxlength="3"></td>
+            <td><input type="text" id="VertRGB" name="Vert" value="00" maxlength="3"></td>
+            <td><input type="text" id="BleuRGB" name="Bleu" value="00" maxlength="3"></td>
         </tr>
         <tr>
             <td colspan="3">

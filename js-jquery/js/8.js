@@ -20,6 +20,7 @@ $(window).on('load', function() {
             'font-weight': 'bolder'
         });
         $('#showCookie').text('Bonjour ' + pp[1] + ' ' + pp[0] + ' !');
+
     }
 
 

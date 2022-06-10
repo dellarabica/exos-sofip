@@ -14,16 +14,25 @@
         
         table tbody tr td {
             width: 16.66%;
+            padding: 0.25em;
         }
         
         #label {
             text-align: center;
             font-weight: bold;
         }
+        
+        input[type="number"],
+        input[type="text"] {
+            width: 100%;
+            box-sizing: border-box/* Just in case if you have defined
+                           left or right padding to the input */
+        }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 
-<body onload="newLine()">
+<body>
     <h1>Prise de commande</h1>
     <hr/>
     <table>
@@ -45,7 +54,7 @@
             </tr>
             <tr>
                 <td>
-                    <input type="button" class="btn" id="addLine" value='+' onclick="newLine()" />
+                    <input type="button" class="btn" id="addLine" value='+' />
                 </td>
                 <td colspan="2"></td>
                 <td id="label">Total</td>

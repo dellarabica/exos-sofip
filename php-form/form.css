@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+table tr td {
+    text-align: center;
+    vertical-align: center;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.15em;
+}
+
+input { 
+    font-size: 1.15em;
+ }

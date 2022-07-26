@@ -1,0 +1,3 @@
+David | Martin | 3, impasse des Lilas | 64600 | Anglet
+Dupont | Claudine | 20, rue du Luxembourg | 59100 | Roubaix
+Chirac |   Jacques | 125 avenue Paul Bert | 64200 | Biarritz

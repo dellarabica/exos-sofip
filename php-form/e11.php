@@ -11,7 +11,7 @@
         <table>
             <tr>
                 <td>Nom et prénom :</td>
-                <td><input type="text" name="nom" pattern="[A-Z]{1}[A-Za-z][ ]{1}[A-Z]{1}[A-Za-z]" required /></td>
+                <td><input type="text" name="nom" pattern="[A-Z]{1}[A-Za-z]{0,}[ ]{1}[A-Z]{1}[A-Za-z]{0,}" required /></td>
             </tr>
             <tr>
                 <td>Âge : </td>

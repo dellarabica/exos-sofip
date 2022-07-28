@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.15em;
+}
+
+span {
+    font-weight: bolder;
+}
+
+h1 {
+    text-align: center;
+}
+
+#txt {
+    color: rgb(140, 140, 54);
+}
+
+#script {
+    color: red;
+}
+
+#office {
+    color: blue;
+}
+
+img {
+    height: 25%;
+    width: 25%;
+}
+
+
+
+ul {
+    list-style: none;
+    font-weight: bolder;
+}
+
+ul li::before {
+    content: "\2022";
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}

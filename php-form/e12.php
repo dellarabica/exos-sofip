@@ -9,7 +9,7 @@
 <body>
     <?php
     $res = fopen("result.txt", 'a');
-    $str = $_POST['nom'].' | '.$_POST['age'].' | '.$_POST['mail'].' | '.str_replace(',', '.', $_POST['don']).PHP_EOL;
+    $str = ucwords($_POST['nom'], "-, ").' | '.$_POST['age'].' | '.$_POST['mail'].' | '.str_replace(',', '.', $_POST['don']).PHP_EOL;
     fwrite($res, $str);
     fclose($res);
     print("Enregistrement réussi !<br/>");

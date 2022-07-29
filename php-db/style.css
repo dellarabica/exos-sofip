@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.15em;
+}
+
+input, select { 
+    font-size: 1.15em;
+ }
+
+ table{
+    border-collapse: collapse;
+ }
+ table tr td {
+    text-align: center;
+    vertical-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid black;
+}
+
+#ent{
+    font-weight: bolder;
+}

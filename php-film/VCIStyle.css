@@ -1,0 +1,134 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: moccasin;
+    font-size: 16px;
+}
+
+#nav{
+    margin: auto;  
+    height:auto; 
+    background-color: #91908a; 
+    color:#000; 
+    border: 1px solid #000;
+    border-radius: 40px;
+}
+
+#nav ul{
+    text-align: center;
+    vertical-align: center;
+}
+
+#nav ul li{
+    display: inline-block; 
+    padding: 8px 25px;
+}
+
+#nav ul li a {
+    text-decoration: none; 
+    color: #000; 
+    font-weight: bold;
+}
+
+#nav ul li a:hover {
+    text-decoration: none; 
+    color: rgb(234, 208, 226); 
+    font-weight: bold;
+}
+
+#welcome {
+    font-weight: bolder;
+    font-size: 26px;
+    text-align: center;
+}
+
+#header {
+    width: 100%;
+    table-layout: fixed ;
+}
+
+#hd1{
+    width: 70%;
+}
+
+#hd2{
+    text-align: center;
+}
+
+#logovci {
+    width: 50%;
+    align-items: left;
+}
+
+#affmin{
+    width: 60%;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+#affmin2{
+    width: 100%;
+    margin-left: -90px;
+    margin-right: -90px ;
+}
+
+#ent{
+    font-weight: bolder;
+}
+
+.centerimg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabfilm{
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+.tabbutton{
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabfilm tr{
+    width: auto;
+    
+}
+
+.tabfilm tr td{
+    border: 3px solid lightslategray;
+    padding: 10px;
+}
+
+.tabsel{
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border: 3px solid lightslategray;
+    background-color: lightskyblue;
+}
+
+.tabsel tr{
+    width: auto;   
+}
+
+.tabsel tr td{
+    padding: 10px;
+}
+
+.tabctr{
+    text-align: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}

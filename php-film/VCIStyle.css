@@ -1,9 +1,16 @@
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: moccasin;
+    
     font-size: 16px;
 }
 
+#user{
+    background-color: moccasin;
+}
+
+#admin{
+    background-color: cadetblue;
+}
 #nav{
     margin: auto;  
     height:auto; 
@@ -132,3 +139,60 @@ body{
     margin-right: auto;
     border-collapse: collapse;
 }
+
+.hyperlink{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.blue{
+    color: blue;
+}
+
+#log {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px 8px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  
+  #btnlogin {
+    padding: 4px;
+    margin: 8px auto auto auto;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+  }
+
+  .container {
+    padding: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #a49ba3;
+    margin: 4% auto 15% 69.5%; 
+    border: 3px solid #888;
+    border-radius: 20px;
+    width: 30%; 
+  }
+
+  #bt{
+    text-align: right;
+  }

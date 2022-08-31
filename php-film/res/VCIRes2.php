@@ -8,14 +8,12 @@ $_SESSION['typefilm'] = strtoupper($_POST['typefilm']);
 <head>
     <title>Sélection du film</title>
     <link rel="stylesheet" href="../VCIStyle.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
     <?php 
     include '../base/VCITitre.php';
     include '../base/VCIMenu.html';
-
     $starttable = "<table class='tabfilm'><tr id='ent'><td>Nom</td><td>Année de sortie</td><td>Réalisateur</td><td>Affiche</td></tr>";
     try {
         $conn = new PDO("mysql:host=localhost;dbname=video", 'root', '');
@@ -32,7 +30,6 @@ $_SESSION['typefilm'] = strtoupper($_POST['typefilm']);
     } catch (PDOException $e) {
         echo "Connexion impossible : " . $e->getMessage();
     }
-    print($typechoisi);
     if(empty($res)){
         print("<p id='welcome'>Nous n'avons aucun film de type $typechoisi disponible dans notre catalogue.<br/></p>");
     }
@@ -43,7 +40,7 @@ $_SESSION['typefilm'] = strtoupper($_POST['typefilm']);
         for ($i = 0; $i < count($res); $i++) {
             $resint = $res[$i];
             $imgsrc = str_replace('Mini', '', "../pics/FilmAffiches/".$typechoisi."/".$resint['REF_IMAGE']);
-            $strtbl = "<tr><td onclick='postFilm(".$resint['ID_FILM'].")'>".utf8_encode($resint['TITRE_FILM'])."</td>
+            $strtbl = "<tr><td><p onclick='postFilm(".$resint['ID_FILM'].")' class='hyperlink'>".utf8_encode($resint['TITRE_FILM'])."</p></td>
             <td>".$resint['ANNEE_FILM']."</td>
             <td>".$resint['PRENOM_STAR']." ".$resint['NOM_STAR']."</td>
             <td><img src='".$imgsrc."' id='affmin' /></td></tr>";
@@ -72,7 +69,7 @@ $_SESSION['typefilm'] = strtoupper($_POST['typefilm']);
         form.setAttribute("action", "VCIRes3.php");
 
         var params = {
-            id: idfilm
+            filmid: idfilm
         };
         for (var key in params) {
             if (params.hasOwnProperty(key)) {

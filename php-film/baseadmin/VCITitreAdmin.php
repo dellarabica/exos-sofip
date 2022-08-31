@@ -1,6 +1,6 @@
 <table id="header">
     <tr>
-        <td id='hd1'><a href='../VCIAccueil.php'><img id='logovci' src="../pics/logo.png" /></a></td>
+        <td id='hd1'><a href='../admin/VCIAdmin.php'><img id='logovci' src="../pics/logo.png" /></a></td>
         <td id="hd2">
             <?php 
                 $date = new DateTime('now', new DateTimeZone('Europe/Paris'));
@@ -10,7 +10,7 @@
             ?>
             <br />
             <p>Bonjour Admin.<br/></p>
-            <a href='#'>Déconnexion</a>
+            <a href='../VCIAccueil.php'>Déconnexion</a>
         </td>
     </tr>
 </table>

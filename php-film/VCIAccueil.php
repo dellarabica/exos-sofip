@@ -9,7 +9,7 @@ session_start();
     <link rel="stylesheet" href="VCIStyle.css" />
 </head>
 
-<body>
+<body id="user">
     <?php 
     include 'base/VCITitre.php';
     include 'base/VCIMenu.html';

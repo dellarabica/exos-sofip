@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['filmid'] = $_POST['id'];
+$_SESSION['filmid'] = $_POST['filmid'];
 ?>
 
 <!DOCTYPE html>
@@ -9,14 +9,12 @@ $_SESSION['filmid'] = $_POST['id'];
 <head>
     <title>Résumé de la réservation</title>
     <link rel="stylesheet" href="../VCIStyle.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
     <?php 
     include '../base/VCITitre.php';
     include '../base/VCIMenu.html';
-    var_dump($_SESSION);
     try {
         $conn = new PDO("mysql:host=localhost;dbname=video", 'root', '');
         $req = "SELECT * FROM film as a INNER JOIN star as b ON a.ID_REALIS=b.ID_STAR WHERE a.ID_FILM='".$_SESSION['filmid']."'";
@@ -58,7 +56,7 @@ $_SESSION['filmid'] = $_POST['id'];
                 <td>
                     Nom de famille
                 </td>
-                <td><input type="text" name="nom" pattern="[A-Za-z\-]{3,}" required /></td>
+                <td><input type="text" name="nom" pattern="[A-Za-z0-9\-]{3,}" required /></td>
 
             </tr>
             <tr>
@@ -66,6 +64,17 @@ $_SESSION['filmid'] = $_POST['id'];
                     Numéro adhérent
                 </td>
                 <td><input type="number" name="num" required /></td>
+            </tr>
+            <tr>
+                <td>Format</td>
+                <td>
+                    <select name='format' id='format' class="centerimg" required>
+                        <option value=''>Sélectionnez le format</option>
+                        <option value='B'>Blu-Ray</option>
+                        <option value='D'>DVD</option>
+                        <option value='K'>Cassette vidéo</option>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <td>

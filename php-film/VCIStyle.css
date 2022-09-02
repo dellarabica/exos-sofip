@@ -1,198 +1,229 @@
-body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
-    font-size: 16px;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: "Rubik", sans-serif;
+
+  font-size: 1.125em;
 }
 
-#user{
-    background-color: moccasin;
+#user {
+  background-color: moccasin;
 }
 
-#admin{
-    background-color: cadetblue;
+#admin {
+  background-color: cadetblue;
 }
-#nav{
-    margin: auto;  
-    height:auto; 
-    background-color: #91908a; 
-    color:#000; 
-    border: 1px solid #000;
-    border-radius: 40px;
-}
-
-#nav ul{
-    text-align: center;
-    vertical-align: center;
+#nav {
+  margin: auto;
+  height: auto;
+  background-color: #91908a;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 2.5em;
 }
 
-#nav ul li{
-    display: inline-block; 
-    padding: 8px 25px;
+#nav ul {
+  text-align: center;
+  vertical-align: center;
+}
+
+#nav ul li {
+  display: inline-block;
+  padding: 0.5em 1.25em;
 }
 
 #nav ul li a {
-    text-decoration: none; 
-    color: #000; 
-    font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
 }
 
 #nav ul li a:hover {
-    text-decoration: none; 
-    color: rgb(234, 208, 226); 
-    font-weight: bold;
+  text-decoration: none;
+  color: rgb(234, 208, 226);
+  font-weight: 600;
 }
 
 #welcome {
-    font-weight: bolder;
-    font-size: 26px;
-    text-align: center;
+  font-weight: 600;
+  font-size: 1.625em;
+  text-align: center;
 }
 
 #header {
-    width: 100%;
-    table-layout: fixed ;
+  width: 100%;
+  table-layout: fixed;
 }
 
-#hd1{
-    width: 70%;
+#hd1 {
+  width: 70%;
 }
 
-#hd2{
-    text-align: center;
+#hd2 {
+  text-align: center;
 }
 
 #logovci {
-    width: 50%;
-    align-items: left;
+  width: 50%;
+  align-items: left;
 }
 
-#affmin{
-    width: 60%;
-    margin-left: -20px;
-    margin-right: -20px;
+#affmin {
+  width: 60%;
+  margin-left: -1.25em;
+  margin-right: -1.25em;
 }
 
-#affmin2{
-    width: 100%;
-    margin-left: -90px;
-    margin-right: -90px ;
+#affmin2 {
+  width: 100%;
+  margin-left: -5.625em;
+  margin-right: -5.625em;
 }
 
-#ent{
-    font-weight: bolder;
+#ent {
+  font-weight: bolder;
 }
 
-.centerimg{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.centerimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.tabfilm{
-    text-align: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: collapse;
+.tabfilm {
+  text-align: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
 }
 
-.tabbutton{
-    text-align: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+.tabbutton {
+  text-align: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.tabfilm tr{
-    width: auto;
-    
+.tabfilm tr {
+  width: auto;
 }
 
-.tabfilm tr td{
-    border: 3px solid lightslategray;
-    padding: 10px;
+.tabfilm tr td {
+  border: 0.1875em solid lightslategray;
+  padding: 0.625em;
 }
 
-.tabsel{
-    text-align: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: collapse;
-    border: 3px solid lightslategray;
-    background-color: lightskyblue;
+.tabsel {
+  text-align: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  border: 0.1875em solid lightslategray;
+  background-color: lightskyblue;
 }
 
-.tabsel tr{
-    width: auto;   
+.tabsel tr {
+  width: auto;
 }
 
-.tabsel tr td{
-    padding: 10px;
+.tabsel tr td {
+  padding: 0.625em;
 }
 
-.tabctr{
-    text-align: center;
-    align-items: center;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: collapse;
+.tabctr {
+  text-align: center;
+  align-items: center;
+  margin-top: 3.125em;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
 }
 
-.hyperlink{
-    text-decoration: underline;
-    cursor: pointer;
+.tabctr tr td{
+    padding: 0.25em 0.5em;
 }
 
-.blue{
-    color: blue;
+.tabctr tr td input,
+.tabctr tr td select{
+    width: 14.375em;
+}
+
+.hyperlink {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.blue {
+  color: blue;
 }
 
 #log {
-    width: 100%;
-    margin: 8px 0;
-    padding: 10px 8px;
-    display: inline-block;
-    box-sizing: border-box;
-  }
-  
-  #btnlogin {
-    padding: 4px;
-    margin: 8px auto auto auto;
-    border: none;
-    cursor: pointer;
-    width: 30%;
-  }
+  width: 100%;
+  margin: 0.5em 0;
+  padding: 0.625em 0.5em;
+  display: inline-block;
+  box-sizing: border-box;
+}
 
-  .container {
-    padding: 16px;
-  }
-  
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0); /* Black w/ opacity */
-    padding-top: 60px;
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #a49ba3;
-    margin: 4% auto 15% 69.5%; 
-    border: 3px solid #888;
-    border-radius: 20px;
-    width: 30%; 
-  }
+#btnlogin {
+  padding: 0.25em;
+  margin: 0.5em auto auto auto;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+}
 
-  #bt{
-    text-align: right;
-  }
+.container {
+  padding: 1em;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  padding-top: 3.75em;
+}
+
+.modal-content {
+  background-color: #a49ba3;
+  margin: 4% auto 15% 69.5%;
+  border: 0.1875em solid #888;
+  border-radius: 1.25em;
+  width: 30%;
+}
+
+#bt {
+  text-align: right;
+}
+
+.tabins {
+  text-align: center;
+  align-items: center;
+  margin-top: 3.125em;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+}
+
+.tabins tr td {
+  padding: 0.25em 0.5em;
+}
+
+.tabins tr td input,
+.tabins tr td textarea {
+  width: 15.625em;
+  padding: 0.125em 0.25em;
+}
+
+.tabins tr td select{
+    width: 15.625em;
+}

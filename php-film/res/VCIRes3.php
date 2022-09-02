@@ -11,44 +11,43 @@ $_SESSION['filmid'] = $_POST['filmid'];
     <link rel="stylesheet" href="../VCIStyle.css" />
 </head>
 
-<body>
-    <?php 
+<body id="user">
+    <?php
     include '../base/VCITitre.php';
     include '../base/VCIMenu.html';
     try {
         $conn = new PDO("mysql:host=localhost;dbname=video", 'root', '');
-        $req = "SELECT * FROM film as a INNER JOIN star as b ON a.ID_REALIS=b.ID_STAR WHERE a.ID_FILM='".$_SESSION['filmid']."'";
+        $req = "SELECT * FROM film as a INNER JOIN star as b ON a.ID_REALIS=b.ID_STAR WHERE a.ID_FILM='" . $_SESSION['filmid'] . "'";
         $st = $conn->prepare($req);
         $st->execute();
         $res = $st->fetchAll(\PDO::FETCH_ASSOC);
         $f = $res[0];
-        $req2 = "SELECT * FROM typefilm WHERE CODE_TYPE_FILM='".$_SESSION['typefilm']."'";
+        $req2 = "SELECT * FROM typefilm WHERE CODE_TYPE_FILM='" . $_SESSION['typefilm'] . "'";
         $st = $conn->prepare($req2);
         $st->execute();
         $res2 = $st->fetchAll(\PDO::FETCH_ASSOC);
         $typechoisi = $res2[0]['LIB_TYPE_FILM'];
-
     } catch (PDOException $e) {
         echo "Connexion impossible : " . $e->getMessage();
     }
     $conn = null;
     print("<p id='welcome'>Voici le film sélectionné<br/></p>");
-    $imgsrc = str_replace('Mini', '', "../pics/FilmAffiches/".$typechoisi."/".$f['REF_IMAGE']);
+    $imgsrc = str_replace('Mini', '', "../pics/FilmAffiches/" . $typechoisi . "/" . $f['REF_IMAGE']);
     $tbl = "<table class='tabsel'>
     <tr>
-    <td rowspan='3'><img src='".$imgsrc."' id='affmin2'/></td>
+    <td rowspan='3'><img src='" . $imgsrc . "' id='affmin2'/></td>
     <td>Titre</td>
-    <td>".utf8_encode($f['TITRE_FILM'])."</td></tr>
+    <td>" . utf8_encode($f['TITRE_FILM']) . "</td></tr>
     <tr>
     <td>Année de sortie</td>
-    <td>".$f['ANNEE_FILM']."</td>
+    <td>" . $f['ANNEE_FILM'] . "</td>
     </tr>
     <tr>
     <td>Réalisateur</td>
-    <td>".$f['PRENOM_STAR']." ".$f['NOM_STAR']."</td>
+    <td>" . $f['PRENOM_STAR'] . " " . $f['NOM_STAR'] . "</td>
     </tr>
     </table>";
-   print($tbl);
+    print($tbl);
     ?>
     <form method="POST" action="VCIRes4.php">
         <table class="tabctr">

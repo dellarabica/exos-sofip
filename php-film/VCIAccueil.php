@@ -10,7 +10,7 @@ session_start();
 </head>
 
 <body id="user">
-    <?php 
+    <?php
     include 'base/VCITitre.php';
     include 'base/VCIMenu.html';
     ?>
